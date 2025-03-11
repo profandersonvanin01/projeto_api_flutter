@@ -1,0 +1,110 @@
+{
+    "info": {
+        "_postman_id": "ca52ac9d-5ca1-47cc-8b02-6f333f3cdb90",
+        "name": "projeto_ddm",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "seleciona_tarefas",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost/projeto_api_flutter/api/api.php",
+                    "path": [
+                        "projeto_ddm",
+                        "api",
+                        "api.php"
+                    ],
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "cria_tarefa",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost/projeto_api_flutter/api/api.php",
+                    "path": [
+                        "projeto_ddm",
+                        "api",
+                        "api.php"
+                    ],
+                    "host": [
+                        "localhost"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"titulo\": \"TESTE 1\",\n  \"descricao\": \"TESTE PARA INSERIR UM POST\"\n}"
+                }
+            }
+        },
+        {
+            "name": "atualiza_tarefa",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "localhost/projeto_api_flutter/api/api.php?id=1",
+                    "query": [
+                        {
+                            "key": "id",
+                            "value": "1"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "projeto_ddm",
+                        "api",
+                        "api.php"
+                    ],
+                    "host": [
+                        "localhost"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"titulo\": \"TESTE 1 NOVO\",\n  \"descricao\": \"TESTE ATUALIZADO PARA INSERIR UM POST\",\n  \"completado\": 1\n}"
+                }
+            }
+        },
+        {
+            "name": "apaga_tarefa",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "localhost/projeto_api_flutter/api/api.php?id=1",
+                    "query": [
+                        {
+                            "key": "id",
+                            "value": "1"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "projeto_ddm",
+                        "api",
+                        "api.php"
+                    ],
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        }
+    ]
+}
